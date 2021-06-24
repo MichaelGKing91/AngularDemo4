@@ -1,0 +1,20 @@
+<h1>Donuts</h1>
+<button (click)="loadAllDonuts()">Load Donuts</button>
+
+<!--
+<ng-container *ngIf="allDonuts && allDonuts.results">
+  <div *ngFor="let cur of allDonuts.results">
+    <app-donuts [aDonut]="cur"></app-donuts>
+  </div>
+</ng-container>
+  -->
+
+<h1>Pauper's Reddit</h1>
+<button (click)="loadReddit()">Load Reddit</button>
+
+<ng-container *ngIf="reddit && reddit.data">
+  <div *ngFor="let item of reddit.data.children">
+    <app-show-reddit [redditItem]="item.data"></app-show-reddit>
+
+  </div>
+</ng-container>
